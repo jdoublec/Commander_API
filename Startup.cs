@@ -38,7 +38,7 @@ namespace Commander
             //         });
 
             services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer
-                (Configuration.GetConnectionString("CommanderConnection")));
+                (Configuration.GetConnectionString("JDCCommanderData")));
 
             services.AddControllers().AddNewtonsoftJson(s => {
                 s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
